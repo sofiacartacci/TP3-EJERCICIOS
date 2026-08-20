@@ -14,7 +14,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final List<Map<String, String>> _mockUsers = const [
     {'username': 'juan', 'password': 'juan123'},
     {'username': 'maria', 'password': 'maria456'},
-    {'username': 'sofiacartacci', 'password': '1234'},
+    {'username': 'sofiacartacci', 'password': '1234'}
   ];
 
   @override
