@@ -4,6 +4,7 @@ import '../screens/login_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/detail_screen.dart';
 import '../entities/destino.dart';
+import '../screens/settings_screen.dart';
 
 class AppRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -20,6 +21,8 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => DetailScreen(destino: destino),
         );
+      case '/settings':
+        return MaterialPageRoute(builder: (_) => const SettingsScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

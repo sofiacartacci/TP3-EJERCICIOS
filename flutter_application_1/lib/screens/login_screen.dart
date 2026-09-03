@@ -58,7 +58,24 @@ class _LoginScreenState extends State<LoginScreen> {
       return;
     }
 
-    Navigator.pushNamed(context, '/home', arguments: matches.first['username']);
+    // Pop up de aviso antes de navegar
+    final username0 = matches.first['username'];
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Aviso'),
+        content: const Text('Inicio de sesión exitoso.'),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.pop(context); // cierra el pop up
+              Navigator.pushNamed(context, '/home', arguments: username0);
+            },
+            child: const Text('OK'),
+          ),
+        ],
+      ),
+    );
   }
 
   @override
